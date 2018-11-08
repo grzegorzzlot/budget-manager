@@ -8,10 +8,15 @@
     <h1>Admin</h1>
     <p>logged in as: <%= loggedInAs %></p>
     <h2>Add category</h2>
-    <form action="/profile" method="POST">
-      <input type="text">
-      <input type="submit" value="Add category">
-    </form>
+    <div>
+      <form method="POST">
+        <input name="category_name" type="text">
+        <input name="category_value" type="text">
+        <input type="submit" value="+">
+      </form>
+    </div>
+      
+    
    
   </body>
 </html>

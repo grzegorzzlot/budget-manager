@@ -7,12 +7,11 @@ router.route('/')
     res.render('signIn', 
     { 
       title: 'Budget Manager',
-    });
-    
+    });    
   })
   .post(passport.authenticate('local',{
       successRedirect: '/profile',
       failureRedirect: '/',
-  }));
+  }))
 
 module.exports = router;

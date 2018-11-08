@@ -11,6 +11,7 @@ const cors = require('cors');
 const signInRouter = require('./routes/signInRoute');
 const signUpRouter = require('./routes/signUpRoute');
 const profileRouter = require('./routes/profileRoute');
+const apiRouter = require('./routes/apiRoute');
  
 
 const app = express();
@@ -32,6 +33,7 @@ require('./config/passport.js')(app);
 app.use('/', signInRouter);
 app.use('/signUp', signUpRouter);
 app.use('/profile', profileRouter);
+app.use('/api', apiRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
